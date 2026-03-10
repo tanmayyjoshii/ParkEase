@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@layer components {
+  /* Elegant Glass Card */
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl;
+    @apply transition-all duration-300 ease-out;
+  }
+  
+  .glass-card:hover {
+    @apply bg-white/15 border-white/30 shadow-3xl transform -translate-y-1;
+  }
+
+  /* Elegant Button */
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 text-white font-semibold;
+    @apply px-6 py-3 rounded-xl shadow-lg hover:shadow-xl;
+    @apply transition-all duration-300 ease-out transform hover:-translate-y-0.5;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary-500/30;
+  }
+
+  .btn-secondary {
+    @apply bg-white/90 text-gray-800 font-semibold border border-gray-200;
+    @apply px-6 py-3 rounded-xl shadow-lg hover:shadow-xl;
+    @apply transition-all duration-300 ease-out transform hover:-translate-y-0.5;
+    @apply focus:outline-none focus:ring-4 focus:ring-gray-500/30;
+  }
+
+  /* Elegant Input */
+  .input-elegant {
+    @apply bg-white/95 border border-gray-200 rounded-xl px-4 py-3;
+    @apply text-gray-800 placeholder-gray-500 font-medium;
+    @apply transition-all duration-300 ease-out;
+    @apply focus:outline-none focus:ring-4 focus:ring-primary-500/30 focus:border-primary-500;
+    @apply hover:border-gray-300;
+  }
+
+  /* Elegant Card */
+  .card-elegant {
+    @apply bg-white rounded-2xl shadow-lg border border-gray-100;
+    @apply transition-all duration-300 ease-out;
+    @apply hover:shadow-xl hover:-translate-y-1;
+  }
+
+  /* Status Badge */
+  .badge-success {
+    @apply bg-gradient-to-r from-green-500 to-green-600 text-white;
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply shadow-lg;
+  }
+
+  .badge-warning {
+    @apply bg-gradient-to-r from-yellow-500 to-yellow-600 text-white;
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply shadow-lg;
+  }
+
+  .badge-error {
+    @apply bg-gradient-to-r from-red-500 to-red-600 text-white;
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply shadow-lg;
+  }
+
+  .badge-info {
+    @apply bg-gradient-to-r from-blue-500 to-blue-600 text-white;
+    @apply px-3 py-1 rounded-full text-xs font-semibold;
+    @apply shadow-lg;
+  }
+
+  /* Loading Spinner */
+  .spinner {
+    @apply w-6 h-6 border-2 border-white/30 border-t-white rounded-full;
+    @apply animate-spin;
+  }
+
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-300 hover:text-white transition-colors duration-200;
+    @apply px-4 py-2 rounded-lg hover:bg-white/10;
+    @apply font-medium;
+  }
+
+  .nav-link.active {
+    @apply text-white bg-white/20;
+  }
+
+  /* Gradient Background */
+  .bg-gradient-elegant {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+
+  .bg-gradient-dark {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 50%, #475569 100%);
+  }
+
+  /* Text Gradients */
+  .text-gradient {
+    @apply bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  /* Custom shadows */
+  .shadow-3xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Backdrop blur utilities */
+  .backdrop-blur-xs {
+    backdrop-filter: blur(2px);
+  }
+
+  .spinner-small {
+    @apply w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin;
+  }
+}
+
