@@ -1,0 +1,16 @@
+# Backend build artifacts
+backend/target/
+*.class
+*.jar
+*.war
+
+# OS
+.DS_Store
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Docs that were deleted
+*.docx
